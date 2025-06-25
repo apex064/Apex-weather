@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apex weather</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- ✅ Dynamic Background (this was missing) -->
+    <div id="background" class="background default-bg">
+      <div class="overlay"></div>
+    </div>
+
+    <!-- Top Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Search city..." />
+      <span class="search-icon" onclick="getWeather()">🔍</span>
+    </div>
+
+    <!-- Main Weather Display -->
+    <div class="weather-main">
+      <img id="weatherIcon" src="assets/icons/sun.png" alt="Weather Icon" />
+      <h1 id="temp">--°</h1>
+      <p id="condition">Loading...</p>
+      <p id="location">Your city</p>
+    </div>
+
+    <!-- Bottom Sheet -->
+    <div class="bottom-sheet">
+      <h3>Hourly Forecast</h3>
+      <div class="forecast-scroll" id="forecast">
+        <!-- JS will insert cards here -->
+      </div>
+
+      <div class="details">
+        <div>
+          <span>🌬 Wind</span>
+          <p id="wind">-- km/h</p>
+        </div>
+        <div>
+          <span>💧 Humidity</span>
+          <p id="humidity">--%</p>
+        </div>
+        <div>
+          <span>🌡 Feels Like</span>
+          <p id="feels">--°</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
